@@ -94,6 +94,12 @@ class LinkedList {
     if (idx === this.length) return this.push(val);
 
     let prev = this._get(idx - 1);
+
+    let newNode = new Node(val);
+    newNode.next = prev.next;
+    prev.next = newNode;
+
+    this.length += 1;
   }
 
   /** removeAt(idx): return & remove item at idx, */
