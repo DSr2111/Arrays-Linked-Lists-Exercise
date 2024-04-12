@@ -139,6 +139,16 @@ class LinkedList {
 
   average() {
     if (this.length === 0) return 0;
+
+    let total = 0;
+    let current = this.head;
+
+    while (current) {
+      total += current.val;
+      current = current.next;
+    }
+
+    return total / this.length;
   }
 }
 
