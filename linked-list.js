@@ -69,6 +69,7 @@ class LinkedList {
     if (idx >= this.length || idx < 0) {
       throw new Error("Invalid index.");
     }
+    return this._get(idx).val;
   }
 
   /** setAt(idx, val): set val at idx to val */
