@@ -89,6 +89,9 @@ class LinkedList {
     if (idx >= this.length || idx < 0) {
       throw new Error("Invalid index.");
     }
+
+    if (idx === 0) return this.unshift(val);
+    if (idx === this.length) return this.push(val);
   }
 
   /** removeAt(idx): return & remove item at idx, */
