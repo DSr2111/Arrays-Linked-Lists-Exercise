@@ -108,6 +108,26 @@ class LinkedList {
     if (idx >= this.length || idx < 0) {
       throw new Error("Invalid index.");
     }
+
+    if (idx === 0) {
+      let val = this.head.val;
+      this.head = this.head.next;
+      this.length -= 1;
+      if (this.length < 2) this.tail = this.head;
+      return val;
+    }
+
+    let prev = this._get(idx - 1);
+
+    // special case: remove tail
+
+    if (idx === this.length - 1) {
+      let val = prev.next.val;
+      prev.next = null;
+      this.tail = prev;
+      this.length -= 1;
+      return val;
+    }
   }
 
   /** average(): return an average of all values in the list */
