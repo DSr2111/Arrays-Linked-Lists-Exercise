@@ -104,7 +104,11 @@ class LinkedList {
 
   /** removeAt(idx): return & remove item at idx, */
 
-  removeAt(idx) {}
+  removeAt(idx) {
+    if (idx >= this.length || idx < 0) {
+      throw new Error("Invalid index.");
+    }
+  }
 
   /** average(): return an average of all values in the list */
 
