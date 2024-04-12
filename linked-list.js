@@ -53,11 +53,15 @@ class LinkedList {
 
   /** pop(): return & remove last item. */
 
-  pop() {}
+  pop() {
+    return this.removeAt(this.length - 1);
+  }
 
   /** shift(): return & remove first item. */
 
-  shift() {}
+  shift() {
+    return this.removeAt(0);
+  }
 
   /** getAt(idx): get val at idx. */
 
