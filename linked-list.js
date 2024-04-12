@@ -128,6 +128,11 @@ class LinkedList {
       this.length -= 1;
       return val;
     }
+
+    let val = prev.next.val;
+    prev.next = prev.next.next;
+    this.length -= 1;
+    return val;
   }
 
   /** average(): return an average of all values in the list */
