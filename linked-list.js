@@ -45,6 +45,10 @@ class LinkedList {
       newNode.next = this.head;
       this.head = newNode;
     }
+
+    if (this.length === 0) this.tail = this.head;
+
+    this.length += 1;
   }
 
   /** pop(): return & remove last item. */
