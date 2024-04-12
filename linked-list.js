@@ -78,6 +78,9 @@ class LinkedList {
     if (idx > this.length || idx < 0) {
       throw new Error("Invalid index.");
     }
+
+    let cur = this._get(idx);
+    cur.val = val;
   }
 
   /** insertAt(idx, val): add node w/val before idx. */
